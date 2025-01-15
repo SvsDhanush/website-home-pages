@@ -1,0 +1,234 @@
+/* General Reset - default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero Section */
+.home-hero {
+  background: url('https://www.sony.co.in/content/dam/sony/contents/regional-FSMC/india/common/homepage/primary-tout/2024/cich-bravia/CICH-Banner_D.jpg') no-repeat center center/cover;
+  background-size: 160%;  /* Zoom in by 20% */
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.home-hero-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.home-cta-button {
+  background: #0072ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Latest Products Section - Product Cards with Color Change Animation */
+.product-card {
+  position: relative;
+  background: #191919; /* Initial black color */
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hover effect to change color from bottom to top */
+.product-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffce00; /* Yellow color */
+  transition: transform 0.5s ease; /* Control the speed of the effect */
+  transform: scaleY(0); /* Start with the yellow background hidden */
+  transform-origin: bottom; /* Make the background grow from the bottom */
+}
+
+/* On hover, expand the yellow color from bottom to top */
+.product-card:hover::after {
+  transform: scaleY(1); /* Expand the yellow color to cover the whole card */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.imgBox img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: white;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.product-card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+/* Promotion Section */
+#home-promotions-offers {
+  background-color: #f2f5fa;
+}
+
+#home-promotions-offers h2 {
+  color: #333333;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.home-promotion-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.home-promotion-card h3 {
+  color: #222222;
+  font-size: 20px;
+}
+
+.home-promotion-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.home-promotion-card img {
+  border-radius: 10px;
+}
+
+.home-promotion-card .home-btn {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.home-promotion-card .home-btn:hover {
+  background-color: #0056b3;
+}
+
+.home-shadow-sm {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-product-cards,
+  .home-promo-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-card,
+  .home-promo-item {
+    margin-bottom: 20px;
+  }
+
+  #home-promotions-offers {
+    padding: 20px;
+  }
+
+  .home-promotion-card {
+    padding: 15px;
+  }
+
+  .home-promotion-card img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .home-promotion-card h3 {
+    font-size: 18px;
+  }
+
+  .home-promotion-card p {
+    font-size: 14px;
+  }
+
+  .home-promotion-card .home-btn {
+    font-size: 14px;
+  }
+}
+
+.home-latest-products {
+  background-color: #f9f9f9;
+}
+
+.home-carousel-control-prev-icon,
+.home-carousel-control-next-icon {
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.home-carousel-inner {
+  padding-top: 20px;
+}
