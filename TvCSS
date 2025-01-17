@@ -55,7 +55,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffce00; /* Yellow color */
+  background-color: #007bff; /* Yellow color */
   transition: transform 0.5s ease; /* Control the speed of the effect */
   transform: scaleY(0); /* Start with the yellow background hidden */
   transform-origin: bottom; /* Make the background grow from the bottom */
