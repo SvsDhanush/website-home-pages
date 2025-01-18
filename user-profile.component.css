@@ -1,0 +1,125 @@
+.profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.profile-details {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.user-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.user-info p {
+    color: #555;
+}
+
+/* Align the orders and wishlist sections side by side */
+.sections-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Each section takes up equal space and should be scrollable */
+.orders-section, .wishlist-section {
+    flex: 1;
+    padding-top: 20px;
+    height: 400px; /* Fixed height for scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ddd; /* Border around the sections */
+}
+
+/* Styling for section title */
+.orders-section h3, .wishlist-section h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd; /* Line under section title */
+    text-align: center;
+}
+
+/* Stack the product cards vertically */
+.orders-wrapper, .wishlist-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack product cards vertically */
+    gap: 20px; /* Add some space between the cards */
+    width: 100%;
+}
+
+/* Product card design */
+.product-card {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.product-image-wrapper {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.buy-again-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-again-btn:hover {
+    background-color: #45a049;
+}
+
+/* Remove arrows and scrolling */
+.arrow {
+    display: none; /* Hide the carousel arrows */
+}
+
+
+/* Add lines between sections */
+.profile-details {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+  }
