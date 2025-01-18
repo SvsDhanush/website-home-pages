@@ -1,0 +1,15 @@
+<!-- Login and Cart Section , Just only added another one-->
+        <div class="form-inline my-2 my-lg-0">
+            <a *ngIf="!isAuthenticated" (click)="login()" class="btn btn-warning">Login</a>
+            <a *ngIf="isAuthenticated" (click)="logout()" class="btn btn-warning">Logout</a>
+            <a [routerLink]="['/cart']">
+                <i id="cart-icon" class="fa-solid fa-cart-shopping" src="" alt="Cart Icon"></i>
+            </a>
+            <p id="cart-total">{{ cartQuantity$ | async }}</p>
+
+            <!-- this '/cart' is not inside [ ] brackets -->
+            <a [routerLink]="'/user-profile'"> 
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </a>
+            <!-- <p id="cart-total">{{ cartQuantity$ | async }}</p> -->
+        </div>         
