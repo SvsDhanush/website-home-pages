@@ -1,23 +1,50 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+<app-navbar></app-navbar>
 
-import { UserProfileComponent } from './user-profile.component';
+<div class="profile-container">
+    <!-- Profile Section -->
+    <div class="profile-details">
+      <img class="profile-image" [src]="user.profileImage" alt="Profile Image">
+      <div class="user-info">
+        <h2>{{ user.name }}</h2>
+        <p>{{ user.email }}</p>
+      </div>
+    </div>
 
-describe('UserProfileComponent', () => {
-  let component: UserProfileComponent;
-  let fixture: ComponentFixture<UserProfileComponent>;
+    <div class="sections-wrapper">
+        <!-- Previous Orders Section -->
+        <div class="orders-section">
+            <h3>Previous Orders</h3>
+            <div class="orders-wrapper">
+                <div class="orders-row" #ordersRow>
+                    <div *ngFor="let order of orders" class="product-card">
+                        <div class="product-image-wrapper">
+                            <img [src]="order.image" alt="{{ order.title }}">
+                        </div>
+                        <div class="product-info">
+                            <p>{{ order.title }}</p>
+                            <button class="buy-again-btn">Buy Again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [UserProfileComponent]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(UserProfileComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+        <!-- Wishlist Section -->
+        <div class="wishlist-section">
+            <h3>Wishlist</h3>
+            <div class="wishlist-wrapper">
+                <div class="wishlist-row" #wishlistRow>
+                    <div *ngFor="let item of wishlist" class="product-card">
+                        <div class="product-image-wrapper">
+                            <img [src]="item.image" alt="{{ item.title }}">
+                        </div>
+                        <div class="product-info">
+                            <p>{{ item.title }}</p>
+                            <button class="buy-again-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
